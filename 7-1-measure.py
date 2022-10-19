@@ -68,7 +68,7 @@ try:
     with open('data.txt', 'w') as data:
         data.write("\n".join(adc_values_string))
     with open('settings.txt', 'w') as settings:
-        settings.write("Средняя частота дискретизации (средняя частота измерений): {:.3f} Гц\nШаг квантования АЦП: {:.3f} В".format(counter / experiment_duration, max_voltage / levels))
+        settings.write("{:.3f}\n{:.3f}".format(counter / experiment_duration, max_voltage / levels))
     print()
     print()
     print("Продолжительность эксперимента (с): {:.3f}".format(experiment_duration))
